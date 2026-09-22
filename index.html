@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Numora Match: Numbers Game</title>
+  <meta name="description" content="Official Privacy Policy for Numora Match - Numbers Game. Details data collection, local storage, advertising with Google AdMob, analytics with Firebase, and user choices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-dark: #3730A3;
+      --primary-light: #EEF2FF;
+      --cyan: #06B6D4;
+      --emerald: #10B981;
+      --purple: #8B5CF6;
+      --amber: #F59E0B;
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-200: #E2E8F0;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1E293B;
+      --slate-900: #0F172A;
+      --card-bg: #FFFFFF;
+      --radius: 16px;
+      --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #F1F6FD 0%, #F8FAFC 25%, #EEF5FF 100%);
+      color: var(--slate-700);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 60px 20px;
+    }
+
+    /* HEADER HERO */
+    .hero-card {
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #06B6D4 100%);
+      border-radius: 24px;
+      padding: 36px 32px;
+      color: #FFFFFF;
+      box-shadow: 0 12px 30px -5px rgba(79, 70, 229, 0.35);
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.95;
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .meta-item strong {
+      font-weight: 700;
+    }
+
+    /* CARD SECTIONS */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 8px 26px -4px rgba(15, 23, 42, 0.1);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .icon-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .icon-badge.indigo { background: #EEF2FF; color: #4F46E5; }
+    .icon-badge.cyan { background: #ECFEFF; color: #0891B2; }
+    .icon-badge.emerald { background: #ECFDF5; color: #059669; }
+    .icon-badge.purple { background: #F5F3FF; color: #7C3AED; }
+    .icon-badge.amber { background: #FFFBEB; color: #D97706; }
+    .icon-badge.blue { background: #EFF6FF; color: #2563EB; }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .section-card p {
+      font-size: 14.5px;
+      color: var(--slate-600);
+      margin-bottom: 12px;
+    }
+
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-card ul {
+      margin: 10px 0 14px 20px;
+      padding: 0;
+    }
+
+    .section-card li {
+      font-size: 14px;
+      color: var(--slate-700);
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+
+    .section-card li strong {
+      color: var(--slate-900);
+    }
+
+    .highlight-box {
+      background: var(--slate-50);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: var(--slate-700);
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border: 1px solid #C7D2FE;
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-top: 14px;
+    }
+
+    .contact-email {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-email:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 24px 0 10px 0;
+      font-size: 13px;
+      color: #94A3B8;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .hero-card {
+        padding: 26px 20px;
+        border-radius: 20px;
+      }
+      .hero-title {
+        font-size: 24px;
+      }
+      .hero-desc {
+        font-size: 14.5px;
+      }
+      .section-card {
+        padding: 20px 18px;
+      }
+      .section-title {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HERO HEADER -->
+    <header class="hero-card">
+      <div class="badge">🔒 Privacy Commitment</div>
+      <h1 class="hero-title">Privacy Policy</h1>
+      <p class="hero-desc">
+        Welcome to <strong>Numora Match - Numbers Game</strong>. Your privacy and trust are paramount. 
+        Numora Match is built with an offline-first architecture designed to provide a rich, relaxing number puzzle experience without tracking your personal identity or compromising your security.
+      </p>
+      <div class="meta-bar">
+        <div class="meta-item"><strong>Application:</strong> Numora Match - Numbers Game</div>
+        <div class="meta-item"><strong>Package ID:</strong> com.aistudio.numoramatch.pqwzkl</div>
+        <div class="meta-item"><strong>Effective Date:</strong> September 2026</div>
+      </div>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge indigo">💾</div>
+        <h2 class="section-title">1. Information We Collect</h2>
+      </div>
+      <p>
+        Numora Match operates primarily on your device. We do <strong>not</strong> require user account creation, social logins, email addresses, phone numbers, or passwords to play.
+      </p>
+      <ul>
+        <li>
+          <strong>Local Game Progress:</strong> Your current stage progression, high scores, total points, completed stages, saved puzzle board state, and custom preferences (sound effects, haptic vibration) are stored locally on your device.
+        </li>
+        <li>
+          <strong>Device Diagnostics & Specs:</strong> Basic technical device information (such as screen resolution, operating system version, and general hardware configuration) provided automatically by the Android system to ensure smooth grid rendering and prevent application crashes.
+        </li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Zero Sensitive Permissions:</strong> Numora Match requests zero dangerous Android runtime permissions. We do not access your Camera, Microphone, GPS Location, Contacts, Photos, or External Storage.
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge cyan">⚙️</div>
+        <h2 class="section-title">2. How We Use Information</h2>
+      </div>
+      <p>All data collected locally is utilized exclusively to maintain and enrich your puzzle experience:</p>
+      <ul>
+        <li>To instantly restore and resume your puzzle session when you reopen the app.</li>
+        <li>To preserve your achievements, stage completion records, and high scores.</li>
+        <li>To remember your sound and vibration preferences.</li>
+        <li>To optimize grid scaling and dynamic UI measurements across phone, foldable, and tablet screens.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge emerald">🛡️</div>
+        <h2 class="section-title">3. Data Storage & User Control</h2>
+      </div>
+      <p>
+        All gameplay data is saved in Android's private, encrypted-by-default app storage (Private SharedPreferences). You maintain full control over your data at all times:
+      </p>
+      <ul>
+        <li>
+          <strong>In-App Reset:</strong> You can completely erase your gameplay progress, completed stages, and high scores at any time by navigating to <em>Settings &rarr; DATA & PROGRESS &rarr; Reset All Game Progress</em>.
+        </li>
+        <li>
+          <strong>Device Clear / Uninstall:</strong> Uninstalling the app or clearing storage via Android's device Settings permanently removes all local data and saved files from your device.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge purple">📢</div>
+        <h2 class="section-title">4. Third-Party Services & Advertising</h2>
+      </div>
+      <p>
+        To keep Numora Match accessible to players worldwide and support ongoing development, we partner with industry-standard Google services that strictly adhere to Google Play Developer Policies:
+      </p>
+      <ul>
+        <li>
+          <strong>Google AdMob:</strong> We show banner advertisements at the bottom of the game screen and optional, user-initiated rewarded video ads to grant hints when hints reach zero. Google AdMob may process device identifiers, advertising IDs, and app interaction data to serve ads, combat ad fraud, and measure ad performance in accordance with <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Policies</a>.
+        </li>
+        <li>
+          <strong>Google Firebase Analytics:</strong> Collects anonymous, aggregated gameplay events (such as stage completions and session length) to help us analyze game difficulty balance and diagnose performance bottlenecks.
+        </li>
+        <li>
+          <strong>Firebase Crashlytics:</strong> Automatically captures anonymized crash logs, stack traces, and device OS versions to rapidly identify and resolve technical issues and ANRs.
+        </li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Managing Your Advertising Preferences:</strong> You can reset or delete your Google Advertising ID anytime on your Android device by visiting:
+        <br>
+        <code>Settings &rarr; Google &rarr; All services &rarr; Ads &rarr; Reset/Delete advertising ID</code>.
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge amber">👶</div>
+        <h2 class="section-title">5. Children's Privacy (COPPA Compliance)</h2>
+      </div>
+      <p>
+        Numora Match is a wholesome, family-friendly numbers puzzle suitable for puzzle enthusiasts of all ages. We do not knowingly solicit, collect, or process personal data from children under the age of 13 (or under 16 in the European Economic Area).
+      </p>
+      <p>
+        If a parent or guardian discovers that a child has provided any personal information, please contact us immediately, and we will take prompt steps to delete such data.
+      </p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge blue">🔄</div>
+        <h2 class="section-title">6. Updates to This Policy</h2>
+      </div>
+      <p>
+        We may occasionally update this Privacy Policy to reflect app enhancements, new puzzle modes, or regulatory changes. The latest version will always be accessible directly within the game (<em>Settings &rarr; Legal & Policies &rarr; Privacy Policy</em>) and via this public document.
+      </p>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="icon-badge indigo">✉️</div>
+        <h2 class="section-title">7. Contact & Support</h2>
+      </div>
+      <p>
+        If you have any questions, feedback, or concerns regarding this Privacy Policy, your privacy, or our data handling practices, please contact our team:
+      </p>
+      <div class="contact-box">
+        <p style="margin-bottom: 6px; font-size: 13px; font-weight: 600; color: #475569;">OFFICIAL DEVELOPER SUPPORT:</p>
+        <a class="contact-email" href="mailto:rvrahul766@gmail.com">rvrahul766@gmail.com</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; 2026 Numora Match - Numbers Game. All rights reserved.
+      <br>
+      <small>Crafted with Jetpack Compose &amp; Material Design 3</small>
+    </footer>
+
+  </div>
+
+</body>
+</html>
